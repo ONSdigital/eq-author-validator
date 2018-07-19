@@ -1,7 +1,7 @@
 class DirectedGraph {
     constructor(name) {
         this.name = name;
-        this.verticies = [];
+        this.vertices = [];
         this.edges = [];
     }
 
@@ -13,7 +13,7 @@ class DirectedGraph {
         #         using this class.
         */
 
-        this.verticies.push(vertex)
+        this.vertices.push(vertex)
     }
 
     createEdge(edge){
@@ -25,8 +25,8 @@ class DirectedGraph {
         this.edges.push(edge)
     }
 
-    getVerticies() {
-        return this.verticies;
+    getVertices() {
+        return this.vertices;
     }
 
     getEdges() {

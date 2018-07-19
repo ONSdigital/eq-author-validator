@@ -6,23 +6,23 @@
 >
 >_Source: https://mathinsight.org/definition/directed_graph_
 
-Formally, a Directed Graph is defined as *D = (E,V)*, where *V* is the set of verticies (nodes), and *E* is the set of edges, which are ordered pairs, (A, B), describing a path from vertex A to vertex B.
+Formally, a Directed Graph is defined as *D = (E,V)*, where *V* is the set of vertices (nodes), and *E* is the set of edges, which are ordered pairs, (A, B), describing a path from vertex A to vertex B.
 
 ## Constructor
 
-The class constructor requires a single argument, the desired name of the graph, and consists of three properties: **name**, **verticies**, and **edges**.
+The class constructor requires a single argument, the desired name of the graph, and consists of three properties: **name**, **vertices**, and **edges**.
 
 ```JavaScript
 constructor(name) {
         this.name = name;
-        this.verticies = [];
+        this.vertices = [];
         this.edges = [];
     }
 ```
 
 `this.name` is a string, where the value is the name of the graph passed in as an argument to the constructor.
 
-`this.verticies` is an array, where each index is an object that describes a vertex on the graph. You add a vertex to the array via the `createVertex` method. The object's properties are defined as:
+`this.vertices` is an array, where each index is an object that describes a vertex on the graph. You add a vertex to the array via the `createVertex` method. The object's properties are defined as:
 
 | Property       | Required     | Value Type   | Notes |
 | ------------- |:-------------:| :-------:|------:|
@@ -39,6 +39,6 @@ constructor(name) {
 
 ### createEdge
 
-### getVerticies
+### getVertices
 
 ### getEdges

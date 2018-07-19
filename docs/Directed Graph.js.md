@@ -22,14 +22,14 @@ constructor(name) {
 
 `this.name` is a string, where the value is the name of the graph passed in as an argument to the constructor.
 
-`this.verticies` is an array, where each index is an object that describes a vertex on the graph. The object's properties are defined as:
+`this.verticies` is an array, where each index is an object that describes a vertex on the graph. You add a vertex to the array via the `createVertex` method. The object's properties are defined as:
 
 | Property       | Required     | Value Type   | Notes |
 | ------------- |:-------------:| :-------:|------:|
 | id     | yes | INT | Used to identify a vertex in the graph. |
 | Arbitrary     | No     | Arbitrary | You may add a series of arbitrarily named properties, of arbitrary types, as required by your program. |
 
-`this.edges` is an array, where each index is an array of two integers that describe an edge on the graph. You add an edge to the array by calling the `createEdge` class method.
+`this.edges` is an array, where each index is an array of two integers that describe an edge on the graph. You add an edge to the array by calling the `createEdge` method. The array *must* adhear to the following schema: `[idOfOriginVertex, idOfDestinationVertex]`.
 
 ## Class Method
 

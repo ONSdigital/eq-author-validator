@@ -56,8 +56,26 @@ You may add a number of arbitrary properties of arbitrary types as required by y
 }
 ```
 
-### createEdge
+### addEdge
+
+Adds a new edge to the graph.
+
+It takes in a single array, which describes an edge, and is defined as:
+
+```JavaScript
+const edge1 = [INT, INT];
+```
+
+The first index *must* be the **id** of the origin vertex, and the second index *must* be the **id** of the destination vertex. For example:
+
+```JavaScript
+const edge1 = [1,2];
+```
 
 ### getVertices
 
+Returns all vertices in the graph.
+
 ### getEdges
+
+Returns all edges in the graph.

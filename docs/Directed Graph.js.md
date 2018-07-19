@@ -32,10 +32,29 @@ constructor(name) {
 `this.edges` is an array, where each index is an array of two integers that describe an edge on the graph. You add an edge to the array by calling the `createEdge` method. The array *must* adhear to the following schema: 
 `[idOfOriginVertex, idOfDestinationVertex]`.
 
-## Class Method
+## Class Methods
 
+### addVertex
 
-### createVertex
+Adds a new vertex to the graph.
+
+It takes in a single object, which describes the vertex, and is defined as:
+
+```JavaScript
+{
+   id: INT
+}
+```
+
+You may add a number of arbitrary properties of arbitrary types as required by your program. For example:
+
+```JavaScript
+{
+   id: 1,
+   surveyQuestion: 'What is your name?',
+   answerType: 'Yes/No'
+}
+```
 
 ### createEdge
 

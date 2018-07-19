@@ -29,7 +29,8 @@ constructor(name) {
 | id     | yes | INT | Used to identify a vertex in the graph. |
 | Arbitrary     | No     | Arbitrary | You may add a series of arbitrarily named properties, of arbitrary types, as required by your program. |
 
-`this.edges` is an array, where each index is an array of two integers that describe an edge on the graph. You add an edge to the array by calling the `createEdge` method. The array *must* adhear to the following schema: `[idOfOriginVertex, idOfDestinationVertex]`.
+`this.edges` is an array, where each index is an array of two integers that describe an edge on the graph. You add an edge to the array by calling the `createEdge` method. The array *must* adhear to the following schema: 
+`[idOfOriginVertex, idOfDestinationVertex]`.
 
 ## Class Method
 

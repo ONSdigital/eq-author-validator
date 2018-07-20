@@ -16,6 +16,8 @@
   },
   "scripts": {
     "test": "yarn lint:js && jest",
-    "lint:js": "eslint src --ext .js --max-warnings=0"
+    "lint:js": "eslint src --ext .js --max-warnings=0",
+    "preversion": "yarn test",
+    "postversion": "git push origin head && git push --tags"
   }
 }

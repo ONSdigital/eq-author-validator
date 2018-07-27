@@ -1,10 +1,15 @@
 const graphlib = require("graphlib");
-const { intersection, isEmpty } = require("lodash");
+const { isEmpty } = require("lodash");
 
-const findOrphanedQuestion = (nodesWithoutOutEdges, nodesWithoutInEdges) =>
-  !isEmpty(intersection(nodesWithoutInEdges, nodesWithoutOutEdges));
+const isOrphaned = (id, firstQuestion, graph) => {
+  if (isEmpty(graph.inEdges(id)) && id !== firstQuestion) {
+    return true;
+  }
 
-describe("Routing Rules", () => {
+  return false;
+};
+
+describe("graphLib Functionality", () => {
   let survey;
   beforeEach(() => {
     survey = new graphlib.Graph();
@@ -52,25 +57,10 @@ describe("Routing Rules", () => {
   });
 
   it("should recognise an orphaned question", () => {
-    survey.setNode("7", "What is your date of birth?");
-
-    const nodesWithoutOutEdges = survey.sinks();
-    const nodesWithoutInEdges = survey.sources();
-
-    expect(
-      findOrphanedQuestion(nodesWithoutOutEdges, nodesWithoutInEdges)
-    ).toBe(true);
+    expect(isOrphaned(6, 1, survey)).toBe(true);
   });
 
   it("should not flag up an error for orphaned questions when there are none", () => {
-    survey.setEdge("5", "6");
-    survey.setEdge("4", "6");
-
-    const nodesWithoutOutEdges = survey.sinks();
-    const nodesWithoutInEdges = survey.sources();
-
-    expect(
-      findOrphanedQuestion(nodesWithoutOutEdges, nodesWithoutInEdges)
-    ).toBe(false);
+    expect(isOrphaned(2, 1, survey)).toBe(false);
   });
 });

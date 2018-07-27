@@ -1,0 +1,322 @@
+{
+  "data": {
+    "questionnaire": {
+      "id": "1",
+      "title": "Cheese",
+      "description": "",
+      "theme": "default",
+      "legalBasis": "StatisticsOfTradeAct",
+      "navigation": false,
+      "surveyId": "",
+      "summary": false,
+      "sections": [
+        {
+          "id": "1",
+          "title": "",
+          "description": "",
+          "pages": [
+            {
+              "id": "1",
+              "title": "<p>Do you like cheese?</p>",
+              "description": "",
+              "guidance": null,
+              "pageType": "QuestionPage",
+              "routingRuleSet": {
+                "id": "2",
+                "else": {
+                  "__typename": "AbsoluteDestination",
+                  "absoluteDestination": {
+                    "id": "4",
+                    "__typename": "QuestionPage"
+                  }
+                },
+                "routingRules": [
+                  {
+                    "id": "2",
+                    "operation": "And",
+                    "goto": {
+                      "__typename": "LogicalDestination",
+                      "logicalDestination": "NextPage"
+                    },
+                    "conditions": [
+                      {
+                        "id": "2",
+                        "comparator": "Equal",
+                        "answer": {
+                          "id": "1",
+                          "type": "Radio",
+                          "options": [
+                            {
+                              "id": "1",
+                              "label": "yes"
+                            },
+                            {
+                              "id": "2",
+                              "label": "no"
+                            }
+                          ],
+                          "other": null
+                        },
+                        "routingValue": {
+                          "value": ["1"]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "3",
+                    "operation": "And",
+                    "goto": {
+                      "__typename": "AbsoluteDestination",
+                      "absoluteDestination": {
+                        "id": "3",
+                        "__typename": "QuestionPage"
+                      }
+                    },
+                    "conditions": [
+                      {
+                        "id": "3",
+                        "comparator": "Equal",
+                        "answer": {
+                          "id": "1",
+                          "type": "Radio",
+                          "options": [
+                            {
+                              "id": "1",
+                              "label": "yes"
+                            },
+                            {
+                              "id": "2",
+                              "label": "no"
+                            }
+                          ],
+                          "other": null
+                        },
+                        "routingValue": {
+                          "value": ["2"]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "answers": [
+                {
+                  "id": "1",
+                  "type": "Radio",
+                  "label": "",
+                  "description": "",
+                  "guidance": "",
+                  "properties": {
+                    "required": false
+                  },
+                  "qCode": "",
+                  "options": [
+                    {
+                      "id": "1",
+                      "label": "yes",
+                      "description": "",
+                      "value": "",
+                      "qCode": ""
+                    },
+                    {
+                      "id": "2",
+                      "label": "no",
+                      "description": "",
+                      "value": "",
+                      "qCode": ""
+                    }
+                  ],
+                  "other": null
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "title": "<p>Why do you like cheese?</p>",
+              "description": "",
+              "guidance": null,
+              "pageType": "QuestionPage",
+              "routingRuleSet": {
+                "id": "1",
+                "else": {
+                  "__typename": "AbsoluteDestination",
+                  "absoluteDestination": {
+                    "id": "4",
+                    "__typename": "QuestionPage"
+                  }
+                },
+                "routingRules": [
+                  {
+                    "id": "1",
+                    "operation": "And",
+                    "goto": {
+                      "__typename": "AbsoluteDestination",
+                      "absoluteDestination": {
+                        "id": "4",
+                        "__typename": "QuestionPage"
+                      }
+                    },
+                    "conditions": [
+                      {
+                        "id": "1",
+                        "comparator": "Equal",
+                        "answer": {
+                          "id": "2",
+                          "type": "Radio",
+                          "options": [
+                            {
+                              "id": "3",
+                              "label": "It's lovely"
+                            },
+                            {
+                              "id": "4",
+                              "label": "I'm a big fan of the moon"
+                            }
+                          ],
+                          "other": null
+                        },
+                        "routingValue": {
+                          "value": []
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "answers": [
+                {
+                  "id": "2",
+                  "type": "Radio",
+                  "label": "",
+                  "description": "",
+                  "guidance": "",
+                  "properties": {
+                    "required": false
+                  },
+                  "qCode": "",
+                  "options": [
+                    {
+                      "id": "3",
+                      "label": "It's lovely",
+                      "description": "",
+                      "value": "",
+                      "qCode": ""
+                    },
+                    {
+                      "id": "4",
+                      "label": "I'm a big fan of the moon",
+                      "description": "",
+                      "value": "",
+                      "qCode": ""
+                    }
+                  ],
+                  "other": null
+                }
+              ]
+            },
+            {
+              "id": "3",
+              "title": "<p>Why do you not like cheese?</p>",
+              "description": "",
+              "guidance": null,
+              "pageType": "QuestionPage",
+              "routingRuleSet": {
+                "id": "3",
+                "else": {
+                  "__typename": "LogicalDestination",
+                  "logicalDestination": "NextPage"
+                },
+                "routingRules": [
+                  {
+                    "id": "4",
+                    "operation": "And",
+                    "goto": {
+                      "__typename": "LogicalDestination",
+                      "logicalDestination": "NextPage"
+                    },
+                    "conditions": [
+                      {
+                        "id": "4",
+                        "comparator": "Equal",
+                        "answer": {
+                          "id": "3",
+                          "type": "Radio",
+                          "options": [
+                            {
+                              "id": "5",
+                              "label": "I'm vegan"
+                            },
+                            {
+                              "id": "6",
+                              "label": "It smells"
+                            }
+                          ],
+                          "other": null
+                        },
+                        "routingValue": {
+                          "value": []
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "answers": [
+                {
+                  "id": "3",
+                  "type": "Radio",
+                  "label": "",
+                  "description": "",
+                  "guidance": "",
+                  "properties": {
+                    "required": false
+                  },
+                  "qCode": "",
+                  "options": [
+                    {
+                      "id": "5",
+                      "label": "I'm vegan",
+                      "description": "",
+                      "value": "",
+                      "qCode": ""
+                    },
+                    {
+                      "id": "6",
+                      "label": "It smells",
+                      "description": "",
+                      "value": "",
+                      "qCode": ""
+                    }
+                  ],
+                  "other": null
+                }
+              ]
+            },
+            {
+              "id": "4",
+              "title": "<p>What is your name?</p>",
+              "description": "",
+              "guidance": null,
+              "pageType": "QuestionPage",
+              "routingRuleSet": null,
+              "answers": [
+                {
+                  "id": "4",
+                  "type": "TextField",
+                  "label": "Name",
+                  "description": "",
+                  "guidance": "",
+                  "properties": {
+                    "required": false
+                  },
+                  "qCode": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

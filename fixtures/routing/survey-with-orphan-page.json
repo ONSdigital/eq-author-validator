@@ -1,0 +1,283 @@
+{
+  "data": {
+    "questionnaire": {
+      "id": "2",
+      "title": "Hummus",
+      "description": "",
+      "theme": "default",
+      "legalBasis": "StatisticsOfTradeAct",
+      "navigation": true,
+      "surveyId": "",
+      "summary": true,
+      "sections": [
+        {
+          "id": "2",
+          "title": "",
+          "description": "",
+          "pages": [
+            {
+              "id": "5",
+              "title": "<p>Do you like hummus?</p>",
+              "description": "",
+              "guidance": null,
+              "pageType": "QuestionPage",
+              "routingRuleSet": {
+                "id": "4",
+                "else": {
+                  "__typename": "LogicalDestination",
+                  "logicalDestination": "NextPage"
+                },
+                "routingRules": [
+                  {
+                    "id": "5",
+                    "operation": "And",
+                    "goto": {
+                      "__typename": "LogicalDestination",
+                      "logicalDestination": "NextPage"
+                    },
+                    "conditions": [
+                      {
+                        "id": "5",
+                        "comparator": "Equal",
+                        "answer": {
+                          "id": "5",
+                          "type": "Radio",
+                          "options": [
+                            {
+                              "id": "7",
+                              "label": "yes"
+                            },
+                            {
+                              "id": "8",
+                              "label": "no"
+                            }
+                          ],
+                          "other": null
+                        },
+                        "routingValue": {
+                          "value": ["7"]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "answers": [
+                {
+                  "id": "5",
+                  "type": "Radio",
+                  "label": "",
+                  "description": "",
+                  "guidance": "",
+                  "properties": {
+                    "required": false
+                  },
+                  "qCode": "",
+                  "options": [
+                    {
+                      "id": "7",
+                      "label": "yes",
+                      "description": "",
+                      "value": "",
+                      "qCode": ""
+                    },
+                    {
+                      "id": "8",
+                      "label": "no",
+                      "description": "",
+                      "value": "",
+                      "qCode": ""
+                    }
+                  ],
+                  "other": null
+                }
+              ]
+            },
+            {
+              "id": "6",
+              "title": "<p>What do you like about hummus?</p>",
+              "description": "",
+              "guidance": null,
+              "pageType": "QuestionPage",
+              "routingRuleSet": {
+                "id": "5",
+                "else": {
+                  "__typename": "AbsoluteDestination",
+                  "absoluteDestination": {
+                    "id": "8",
+                    "__typename": "QuestionPage"
+                  }
+                },
+                "routingRules": [
+                  {
+                    "id": "6",
+                    "operation": "And",
+                    "goto": {
+                      "__typename": "AbsoluteDestination",
+                      "absoluteDestination": {
+                        "id": "8",
+                        "__typename": "QuestionPage"
+                      }
+                    },
+                    "conditions": [
+                      {
+                        "id": "6",
+                        "comparator": "Equal",
+                        "answer": {
+                          "id": "6",
+                          "type": "Radio",
+                          "options": [
+                            {
+                              "id": "9",
+                              "label": "Everything"
+                            },
+                            {
+                              "id": "10",
+                              "label": "It makes me happy"
+                            },
+                            {
+                              "id": "11",
+                              "label": "The taste"
+                            },
+                            {
+                              "id": "12",
+                              "label": "The texture"
+                            }
+                          ],
+                          "other": null
+                        },
+                        "routingValue": {
+                          "value": []
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "answers": [
+                {
+                  "id": "6",
+                  "type": "Radio",
+                  "label": "",
+                  "description": "",
+                  "guidance": "",
+                  "properties": {
+                    "required": false
+                  },
+                  "qCode": "",
+                  "options": [
+                    {
+                      "id": "9",
+                      "label": "Everything",
+                      "description": "",
+                      "value": "",
+                      "qCode": ""
+                    },
+                    {
+                      "id": "10",
+                      "label": "It makes me happy",
+                      "description": "",
+                      "value": "",
+                      "qCode": ""
+                    },
+                    {
+                      "id": "11",
+                      "label": "The taste",
+                      "description": null,
+                      "value": null,
+                      "qCode": null
+                    },
+                    {
+                      "id": "12",
+                      "label": "The texture",
+                      "description": null,
+                      "value": null,
+                      "qCode": null
+                    }
+                  ],
+                  "other": null
+                }
+              ]
+            },
+            {
+              "id": "7",
+              "title": "<p>Why do you not like hummus?</p>",
+              "description": "",
+              "guidance": null,
+              "pageType": "QuestionPage",
+              "routingRuleSet": null,
+              "answers": [
+                {
+                  "id": "7",
+                  "type": "Radio",
+                  "label": "",
+                  "description": "",
+                  "guidance": "",
+                  "properties": {
+                    "required": false
+                  },
+                  "qCode": "",
+                  "options": [
+                    {
+                      "id": "13",
+                      "label": "Kidding, I think hummus is great",
+                      "description": "",
+                      "value": "",
+                      "qCode": ""
+                    },
+                    {
+                      "id": "14",
+                      "label": "It doesn't taste nice",
+                      "description": "",
+                      "value": "",
+                      "qCode": ""
+                    },
+                    {
+                      "id": "15",
+                      "label": "The texture is weird",
+                      "description": null,
+                      "value": null,
+                      "qCode": null
+                    }
+                  ],
+                  "other": null
+                }
+              ]
+            },
+            {
+              "id": "8",
+              "title": "<p>What is your date of birth?</p>",
+              "description": "",
+              "guidance": null,
+              "pageType": "QuestionPage",
+              "routingRuleSet": null,
+              "answers": [
+                {
+                  "id": "8",
+                  "type": "DateRange",
+                  "label": "Date of birth",
+                  "description": "",
+                  "guidance": "",
+                  "properties": {
+                    "required": false
+                  },
+                  "qCode": "",
+                  "childAnswers": [
+                    {
+                      "id": "8from",
+                      "label": "Date of birth"
+                    },
+                    {
+                      "id": "8to",
+                      "label": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
